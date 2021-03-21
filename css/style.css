@@ -73,14 +73,14 @@ body {
 }
 
 header {
-  background-color: #FFE3E4;  /*pink*/
+  background-color: #FEF7EF;  /*neutral*/
   position: relative;
   margin: 0 auto;
   top: 0;
 }
 
 nav{
-  background-color: #FFE3E4; /*pink*/
+  background-color: #FEF7EF; /*neutral*/
   padding-bottom: 20px;
   position: relative;
   margin: 0 auto;
@@ -106,7 +106,7 @@ article{
 }
 
 footer {
-  background-color: #FFE3E4;  /*pink*/
+  background-color: #FEF7EF;  /*neutral*/
   margin: 0 auto;
 }
 
@@ -169,7 +169,7 @@ footer {
   height:100%;
   line-height:100%;
   opacity: 0;
-  background-color: #FFE3E4;  /*pink*/
+  background-color: #fff;  /*white*/
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
@@ -184,7 +184,7 @@ footer {
   vertical-align: middle;
   font-size: 16px;
   text-align: center;
-  color: #FD919D;  /*dark pink*/
+  color: #333;  /*charcoal*/
 }
 
 /******************************************
@@ -215,7 +215,7 @@ h3{
 
 h4{
   font-size: 16px;
-  color: #FD919D;
+  color: #333; /*charcoal*/
   text-align: left;
   padding: 0 10px 0 180px;
 }
@@ -226,7 +226,7 @@ h5{
 
 h6{
   font-size: 16px;
-  color: #FD919D;  /*dark pink*/
+  color: #333;  /*charcoal*/
 }
 
 p{
@@ -238,7 +238,7 @@ p{
 
 a{
   font-family: 'Apercu', Calibri, sans-serif;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 16px;
   color: #333;  /*charcoal*/
 }
@@ -258,7 +258,7 @@ li{
 }
 
 .footer-right a:hover{
-  color: #ff0008;
+  color: #D195E4; /*lavender*/
 }
 
 
@@ -282,14 +282,15 @@ li{
 
 nav a{
   padding:0 10px; 
+  text-decoration: none; 
 }
 
 nav a:hover{
-  color: #FD919D;
+  color: #D195E4; /*lavender*/
 }
 
 .selected{
-  color: #ff0008;
+  color: #D195E4;
 }
 
 .selected:hover{
@@ -302,7 +303,7 @@ nav a:hover{
 }
 
 .pink{
-  background-color: #FFE3E4;
+  background-color: #FEF7EF; /*neutral update*/
 }
 
 .underlay{
@@ -375,11 +376,11 @@ nav a:hover{
 
 .contact {
   padding-bottom: 60px;
-  color: #ff0008;
+  color: #333;
 }
 
 .contact:hover {
-  color: #FD919D;
+  color: #D195E4;
 }
 
 .mobile-nav{
@@ -511,7 +512,7 @@ article{
   }
 
   .footer-left{
-    background-color: #FFE3E4;
+    background-color: #FEF7EF; /*neutral*/
     padding: 20px 0 20px 0;
     text-align: center;
     display: block;
@@ -520,7 +521,7 @@ article{
   }
 
   .footer-right{
-    background-color: #FFE3E4;
+    background-color: #FEF7EF; /*neutral*/
     padding: 0 0 30px 0;
     text-align: center;
     display: block;
@@ -539,7 +540,7 @@ article{
 
 
   nav.open{
-    background-color: #FFE3E4;
+    background-color: #FEF7EF; /*neutral*/
   }
 
   nav a{

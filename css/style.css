@@ -51,12 +51,12 @@ footer {
 /* End: Footer at bottom */
 
 body {
-  font-family: 'Apercu', Calibri, sans-serif; font-size-adjust:0.508; font-weight:normal; font-style:normal;
+  font-family: 'Apercu', Calibri, sans-serif;
   background-color: #fff;
-  text-align: center;
+  text-align: left;
   line-height: 1.4;
   font-size: 12px;
-  color: #333;
+  color: #000;
 }
 
 
@@ -66,31 +66,33 @@ body {
 /* LAYOUT
 /*******************************************/
 
-/* Center the container */
+/* Left align the container */
 .container {
   max-width: 1064px;
-  margin: 0 auto;
+  justify-content: left;
+  margin: 0;
 }
 
 header {
-  background-color: #FEF7EF;  /*neutral*/
+  background-color: #FFF;  /*white*/
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   top: 0;
 }
 
 nav{
-  background-color: #FEF7EF; /*neutral*/
+  font-family: 'Apercu';
+  background-color: #FFF; /*white*/
   padding-bottom: 20px;
   position: relative;
-  margin: 0 auto;
+  padding: 0px 40px;
 }
 
 section {
   padding-bottom: 50px;
   position: relative;
   max-width: 1064px;
-  margin: 0 auto;  
+  margin: 0;  
 }
 
 article{
@@ -106,86 +108,11 @@ article{
 }
 
 footer {
-  background-color: #FEF7EF;  /*neutral*/
+  background-color: #FFF;  /*white*/
   margin: 0 auto;
 }
 
-.predictor-tool{
-  background-image: url("../images/thumbnail_punters_ios_predictor_1004x900.png"); 
-}
 
-.fingerprint-login{
-  background-image: url("../images/thumbnail_bestodds_fingerprint-login_1004x900.png"); 
-}
-
-.ios-profiles{
-  background-image: url("../images/thumbnail_punters_ios_profiles_1004x900.png");
-}
-
-.betslip{
-  background-image: url("../images/thumbnail_punters_ios_betslip_1004x900.png");
-}
-
-.desktop-profiles{
-  background-image: url("../images/thumbnail_punters_web_profiles_1004x900.png");
-}
-
-.mile-end{
-  background-image: url("../images/thumbnail_mile-end_1004x900.png");
-}
-
-.carte{
-  background-image: url("../images/thumbnail_carte_website_1004x900.png");
-}
-
-.it-masters{
-  background-image: url("../images/thumbnail_it-masters_1004x900.png");
-}
-
-.index{
-  padding: 0 10px 100px 10px;
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: center;
-  align-items: center;
-}
-
-.index img{
-  max-height: 100%;
-  max-width:100%;
-}
-
-.index a{
-  display: block;
-  height:100%;
-}
-
-.hoverbg{
-  display:flex;
-  justify-content:center;
-  flex-direction:column;
-  text-align: center;
-  width: 502px;
-  height:100%;
-  line-height:100%;
-  opacity: 0;
-  background-color: #fff;  /*white*/
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-}
-
-.hoverbg:hover{
-  opacity: 1;
-}
-
-.title{
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 16px;
-  text-align: center;
-  color: #333;  /*charcoal*/
-}
 
 /******************************************
 /* TYPE
@@ -194,11 +121,25 @@ footer {
 
 @font-face{
   font-family: 'Apercu';
+  src: url('fonts/Apercu-Light.otf');
+}
+
+@font-face{
+  font-family: 'Apercu';
+  src: url('fonts/ApercuBold.otf');
+  font-weight:bold;
+}
+
+
+@font-face{
+  font-family: 'Apercu';
   src: url('fonts/ApercuRegular.otf');
+  font-weight:500;
 }
 
 h1{
-  padding: 60px 0 20px 0;
+  font-weight: bold;
+  padding: 40px 0 20px 0;
   font-size: 32px;
 }
 
@@ -209,13 +150,13 @@ h2{
 
 h3{
   padding: 0 0 20px 0px;
-  text-align: center;
+  text-align: left;
   font-size: 24px;
 }
 
 h4{
   font-size: 16px;
-  color: #333; /*charcoal*/
+  color: #3B0CD2;  /*purple*/
   text-align: left;
   padding: 0 10px 0 180px;
 }
@@ -226,21 +167,25 @@ h5{
 
 h6{
   font-size: 16px;
-  color: #333;  /*charcoal*/
+  color: #3B0CD2;  /*purple*/
 }
 
 p{
-  font-family: 'Merriweather', serif;
-  padding: 0 100px 60px 100px;
-  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 40px 60px 40px;
   font-size: 16px;
 }
 
 a{
-  font-family: 'Apercu', Calibri, sans-serif;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 16px;
-  color: #333;  /*charcoal*/
+  color: #3B0CD2;  /*purple*/
+}
+
+a:hover{
+  text-decoration-line: underline;
+  color: #000;
+  text-decoration-color: #d195E4;  /*light purple*/
 }
 
 ul{
@@ -258,39 +203,41 @@ li{
 }
 
 .footer-right a:hover{
-  color: #D195E4; /*lavender*/
+  color: #d195E4;  /*light purple*/;
 }
-
 
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-.logo img{
-  padding: 50px 0 50px 0;
-  margin: 0 auto;
+
+.logo {
+  padding: 40px 40px 20px 40px;
+  font-size: 32px;
+  color: #3B0CD2;  /*purple*/;
 }
 
-.logo img:hover{
-  opacity: 0.7;
+.logo:hover{
+  color: #D195E4;  /*light purple*/
+  text-decoration: none;
 }
 
-.logo a{
-  display: inline-block;
-}
 
 nav a{
-  padding:0 10px; 
-  text-decoration: none; 
+  font-weight: 500;
+  color: #000;
+  padding:0 20px 0 0; 
+  margin: 0px;
 }
 
-nav a:hover{
-  color: #D195E4; /*lavender*/
+nav a:hover{  
+  text-decoration-line: underline;
+  text-decoration-color: #D195E4; /*light purple*/
 }
 
 .selected{
-  color: #D195E4;
+  color: #3B0CD2;  /*purple*/;
 }
 
 .selected:hover{
@@ -302,25 +249,15 @@ nav a:hover{
   width: 100%;
 }
 
-.pink{
-  background-color: #FEF7EF; /*neutral update*/
-}
-
-.underlay{
-  position: absolute;
-  height: 200px;
-  width: 100%;
-}
-
 .footer-left{
-  padding: 20px 0 0 20px;
+  padding: 20px 0 0 40px;
   display: inline-block;
   text-align: left;
   width: 50%;
 }
 
 .footer-right{
-  padding: 20px 20px 0 0;
+  padding: 20px 40px 0 0;
   display: inline-block;
   text-align: right;
   width: 50%;
@@ -355,11 +292,12 @@ nav a:hover{
 }
 
 .nav-underline {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #D195E4;
 }
 
 .about-text{
-  padding: 40px 100px 60px 100px;
+  padding: 40px 40px 60px 40px;
+  max-width: 800px;
 }
 
 .cv-section{
@@ -374,14 +312,6 @@ nav a:hover{
   padding: 40px 100px 20px 100px;
   }
 
-.contact {
-  padding-bottom: 60px;
-  color: #333;
-}
-
-.contact:hover {
-  color: #D195E4;
-}
 
 .mobile-nav{
   display: none;
@@ -390,12 +320,6 @@ nav a:hover{
 /* Phones -----------------------*/
 @media screen and (max-width:767px) {
 
-  /* Index Images */
-
-
-.index{
-  padding: 0 0 100px 0;
-}
 
 article{
   max-width: 502px; 
@@ -403,23 +327,12 @@ article{
   background-size: 100%;
 }
 
-.hoverbg{
-  text-align: center;
-  max-width: 502px;
-  padding: 0 10px 20px 10px;
-}
-
-.hoverbg:hover{
-  opacity: 0;
-}
-
-
 
   /* Content Images */
 
   #container img{
     padding: 0 10px 20px 10px;
-    margin: 0 auto;
+    margin: 0;
     width: 100%;
   }
 
@@ -427,7 +340,7 @@ article{
 
   .left-column{
     padding: 0 20px 20px 20px;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     width: 100%;
   }
@@ -437,17 +350,17 @@ article{
   }
 
   .right-align h4{
-    text-align: center;
+    text-align: left;
     padding: 0 10px 0 10px;
   }
 
   .right-align p{
-    text-align: center;
+    text-align: left;
   }
 
   .right-column{
     padding: 0 20px 20px 20px;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     width: 100%;
   }
@@ -459,11 +372,16 @@ article{
 
   /*Text Layout*/
 
+  h1{
+    padding: 40px 20px 20px 0;
+  }
+  
+
   p,
   h2,
   h3{
     padding: 0 20px 20px 20px;
-    text-align: center;
+    text-align: left;
     display: block;
   }
 
@@ -482,14 +400,17 @@ article{
   }
   footer {
     position: absolute;
-    height: 100px;
+    height: 60px;
     width: 100%;
     bottom: 0;
     left: 0;
   }
 
+  .logo{
+    padding: 0 0 0 20px;
+  }
+
   .about-nav{
-    border-bottom: 1px solid #333;
     padding-bottom: 0;  
   }
 
@@ -503,27 +424,21 @@ article{
 
   .cv-section{
     padding: 0 20px 20px 20px;
-    text-align: center;
+    text-align: left;
     display: block;
   }
 
-  .education{
-    padding: 0;
-  }
-
   .footer-left{
-    background-color: #FEF7EF; /*neutral*/
-    padding: 20px 0 20px 0;
-    text-align: center;
+    padding: 0 20px;
+    text-align: left;
     display: block;
     width: 100%;
     
   }
 
   .footer-right{
-    background-color: #FEF7EF; /*neutral*/
-    padding: 0 0 30px 0;
-    text-align: center;
+    padding: 0 20px 0 20px;
+    text-align: left;
     display: block;
     width: 100%;
   }
@@ -540,17 +455,19 @@ article{
 
 
   nav.open{
-    background-color: #FEF7EF; /*neutral*/
+    background-color: #fff; 
+  
   }
 
   nav a{
-    margin-bottom: 20px;
+    padding-top: 20px;
     display: block;
+
     }
 
   .mobile-nav{
     transition: all 0.1s;
-    padding-bottom: 20px;
+    padding: 0 20px 0px 20px;
     position: relative;
     display: block;
     width: 100%;  
@@ -560,8 +477,6 @@ article{
     display: none;
   }
 
-  .mobile-nav-open{
-    display: block;
-  }
+
 
 }  
